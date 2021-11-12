@@ -10,7 +10,7 @@ ROOT_DIR=$PWD
 
 for PROPERTIES_ROOT_DIR in ${ROOT_DIR} ${ROOT_DIR}/.. ${ROOT_DIR}/../..
 do
-    CUSTOM_PROPERTIES=${PROPERTIES_ROOT_DIR}/config/dockergento/properties
+    CUSTOM_PROPERTIES=${PROPERTIES_ROOT_DIR}/.docker/config/dockergento/properties
     if [ -f ${CUSTOM_PROPERTIES} ]; then
         source ${CUSTOM_PROPERTIES}
     fi

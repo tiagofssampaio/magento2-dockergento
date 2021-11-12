@@ -6,7 +6,7 @@ If you want to use `grumphp` together with `git hooks`, the `grumphp` commands n
 
 Copy provided `grumphp` templates into your project 
 
-* See [config/grumphp/hooks](../config/grumphp/hooks)
+* See [config/grumphp/hooks](../.docker/config/grumphp/hooks)
 
 ```
 cp magento2-dockergento/config/grumphp/hooks <your_project>/config/grumphp/hooks

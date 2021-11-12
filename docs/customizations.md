@@ -49,8 +49,8 @@ There are some properties that can be customised if your project setup differs f
 ### Custom properties paths
 
 * `<PROJECT_ROOT>/config/dockergento/properties`
-* `<PROJECT_ROOT>/../config/dockergento/properties`
-* `<PROJECT_ROOT>/../../config/dockergento/properties`
+* `<PROJECT_ROOT>/../.docker/config/dockergento/properties`
+* `<PROJECT_ROOT>/../../.docker/config/dockergento/properties`
 
 ### Default properties
 

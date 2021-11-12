@@ -2,12 +2,14 @@ version: "3.7"
 
 services:
   phpfpm:
-    image: modestcoders/php:7.1-fpm
+    build:
+      context: .
+      dockerfile: .docker/php/Dockerfile
     volumes: &appvolumes
       - sockdata:/sock
       - ../.composer:/var/www/.composer:delegated
       - ../.composer:/var/www/html/var/composer_home:delegated
-      - ./config/dockergento/nginx/conf/default.conf:/var/www/conf/nginx/default.conf:delegated
+      - ./docker/config/dockergento/nginx/conf/default.conf:/var/www/conf/nginx/default.conf:delegated
     environment:
       PHP_IDE_CONFIG: serverName=localhost
     depends_on:
@@ -15,7 +17,7 @@ services:
       - elasticsearch
 
   nginx:
-    image: modestcoders/nginx:1.13
+    image: nginx:1.13
     ports:
       - 80:8000
     volumes: *appvolumes
