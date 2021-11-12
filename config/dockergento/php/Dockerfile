@@ -36,4 +36,4 @@ RUN apt-get remove -y libxslt1-dev icu-devtools libicu-dev && \
 
 ENV PHP_MEMORY_LIMIT=1G
 
-WORKDIR /var/www
+WORKDIR /var/www/html
