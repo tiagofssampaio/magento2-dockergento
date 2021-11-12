@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
   phpfpm:
+    platform: linux/arm64/v8
     volumes: &appvolumes-mac
       - workspace:/var/www/html
       - ./app:/var/www/html/app:delegated
@@ -12,13 +13,19 @@ services:
       # {FILES_IN_GIT}
 
   nginx:
+    platform: linux/arm64/v8
     volumes: *appvolumes-mac
 
   node:
+    platform: linux/arm64/v8
     volumes: *appvolumes-mac
 
+  elasticsearch:
+    platform: linux/arm64/v8
+
   unison:
-    image: modestcoders/unison:2.51.2
+    platform: linux/arm64/v8
+    image: unison:2.51.2
     volumes:
       - workspace:/var/www/html
       - ./vendor:/sync/vendor
