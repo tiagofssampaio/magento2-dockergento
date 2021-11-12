@@ -37,7 +37,7 @@ services:
       - dbdata:/var/lib/mysql
 
   node:
-    image: modestcoders/node-php:node8-php7.1
+    image: node-php:node8-php7.1
     ports:
       - 35729:35729
     volumes: *appvolumes
@@ -45,7 +45,7 @@ services:
       - phpfpm
 
   elasticsearch:
-    image: modestcoders/elasticsearch:6.5
+    image: elasticsearch:7.14.2
     environment:
       - discovery.type=single-node
     volumes:
